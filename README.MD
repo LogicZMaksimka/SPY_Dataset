@@ -10,7 +10,7 @@ We proudly present the **SPY Dataset**, a novel synthetic dataset for the task o
 
 
 <div style="text-align: center;">
-    <img src="img/prompting_pipeline.png" alt="Generation Pipeline" width="30%">
+    <img src="img/prompting_pipeline.png" alt="Generation Pipeline" width="50%">
 </div>
 
 ## Dataset Statistics
