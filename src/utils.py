@@ -95,21 +95,6 @@ def replace_placeholders_with_entities(df, entities_df):
 
     return pd.DataFrame(new_data)
 
-def reconstruct_text(df):
-    new_data = []
-    for _, row in df.iterrows():
-        tokens = row['tokens']
-        trailing_whitespaces = row['trailing_whitespaces']
-        text = "".join(token + (" " if whitespace else "") for token, whitespace in zip(tokens, trailing_whitespaces)).strip()
-        
-        new_data.append({
-            **row.to_dict()
-            'text': text
-        })
-
-    return pd.DataFrame(new_data)
-
-
 def map_ent_tags_to_labels(df, ent_tags):
     label_map = {tag: index for index, tag in enumerate(ent_tags)}
     new_data = []
@@ -117,7 +102,7 @@ def map_ent_tags_to_labels(df, ent_tags):
     for _, row in df.iterrows():
         labels = [label_map.get(tag, -1) for tag in row['ent_tags']]
         new_data.append({
-            **row.to_dict()
+            **row.to_dict(),
             'labels': labels
         })
 

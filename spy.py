@@ -3,7 +3,7 @@ from typing import List
 import pandas as pd
 import datasets
 from faker import Faker
-from src.utils import replace_placeholders_with_entities, generate_profiles, reconstruct_text, map_ent_tags_to_labels
+from src.utils import replace_placeholders_with_entities, generate_profiles, map_ent_tags_to_labels
 
 _DESCRIPTION = ""
 
@@ -64,7 +64,6 @@ class SPYConfig(datasets.BuilderConfig):
     def __init__(self, faker_random_seed: int = 0, **kwargs):
         """BuilderConfig for SPY dataset."""
         super(SPYConfig, self).__init__(**kwargs)
-        # self.random_seed = random_seed
         Faker.seed(faker_random_seed)
 
 class SPY(datasets.GeneratorBasedBuilder):
@@ -87,7 +86,7 @@ class SPY(datasets.GeneratorBasedBuilder):
             description=_DESCRIPTION,
             features=datasets.Features(
                 {
-                    "text": datasets.Value("string"),
+                    # "text": datasets.Value("string"),
                     "tokens": datasets.Sequence(feature=datasets.Value("string")),
                     "trailing_whitespaces": datasets.Sequence(feature=datasets.Value("bool")),
                     "labels": datasets.Sequence(
