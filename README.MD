@@ -2,10 +2,13 @@
 
 We proudly present the **SPY Dataset**, a novel synthetic dataset for the task of **Personal Identifiable Information (PII)** detection. This dataset highlights the importance of safeguarding PII in modern data processing and serves as a benchmark for advancing privacy-preserving technologies.
 
+The dataset is publicly available on [Hugging Face Datasets Hub](https://huggingface.co/datasets/mks-logic/SPY).
+
 ## Key Highlights
 
 - **Innovative Generation:** We present a methodology for developing the SPY dataset and compare it to other methodologies used for creating synthetic PII datasets. Our approach does not require any external data and can be applied to any knowledge domain.
 - **Benchmark for PII Detection:** We open-source the SPY dataset containing 4,491 medical consultations and 4,197 questions in the legal domain, specifically developed to highlight the contrast between average named entity recognition tasks and more fine-grained PII detection.
+
 
 ## Dataset Storage and Dynamic Entity Generation
 
